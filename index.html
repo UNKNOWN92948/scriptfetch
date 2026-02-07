@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML CSS JS Example</title>
+
+    <!-- CSS Part -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #count {
+            font-size: 20px;
+            margin: 15px 0;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML Part -->
+    <div class="card">
+        <h1>Click Counter</h1>
+        <p id="count">0</p>
+        <button onclick="increaseCount()">Click Me</button>
+    </div>
+
+    <!-- JavaScript Part -->
+    <script>
+        let counter = 0;
+
+        function increaseCount() {
+            counter++;
+            document.getElementById("count").innerText = counter;
+        }
+    </script>
+
+</body>
+</html>
